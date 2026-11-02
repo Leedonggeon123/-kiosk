@@ -1,0 +1,635 @@
+{
+    "option_groups": [
+        {
+            "group_id": "opt_temperature",
+            "group_name": "온도 선택",
+            "required": true,
+            "max_selectable": 1,
+            "options": [
+                {
+                    "option_id": "temp_ice",
+                    "name": "ICE (시원하게)",
+                    "price": 0
+                },
+                {
+                    "option_id": "temp_hot",
+                    "name": "HOT (따뜻하게)",
+                    "price": 0
+                }
+            ]
+        },
+        {
+            "group_id": "opt_shot",
+            "group_name": "샷 / 디카페인 추가",
+            "required": false,
+            "max_selectable": 3,
+            "options": [
+                {
+                    "option_id": "shot_add",
+                    "name": "에스프레소 샷 추가 (+1샷)",
+                    "price": 500
+                },
+                {
+                    "option_id": "decaf_change",
+                    "name": "디카페인 원두 변경",
+                    "price": 500
+                }
+            ]
+        },
+        {
+            "group_id": "opt_syrup_topping",
+            "group_name": "시럽 및 토핑 추가",
+            "required": false,
+            "max_selectable": 5,
+            "options": [
+                {
+                    "option_id": "syrup_vanilla",
+                    "name": "바닐라 시럽 추가",
+                    "price": 500
+                },
+                {
+                    "option_id": "syrup_caramel",
+                    "name": "카라멜 시럽 추가",
+                    "price": 500
+                },
+                {
+                    "option_id": "syrup_hazelnut",
+                    "name": "헤이즐넛 시럽 추가",
+                    "price": 500
+                },
+                {
+                    "option_id": "topping_whipping",
+                    "name": "휘핑크림 추가",
+                    "price": 500
+                },
+                {
+                    "option_id": "topping_pearl",
+                    "name": "타피오카 펄 추가",
+                    "price": 700
+                },
+                {
+                    "option_id": "topping_icecream",
+                    "name": "바닐라 아이스크림 추가",
+                    "price": 1000
+                }
+            ]
+        },
+        {
+            "group_id": "opt_sweetness",
+            "group_name": "당도 선택",
+            "required": false,
+            "max_selectable": 1,
+            "options": [
+                {
+                    "option_id": "sweet_100",
+                    "name": "기본 당도 (100%)",
+                    "price": 0
+                },
+                {
+                    "option_id": "sweet_50",
+                    "name": "덜 달게 (50%)",
+                    "price": 0
+                }
+            ]
+        },
+        {
+            "group_id": "opt_ice_amount",
+            "group_name": "얼음양 선택",
+            "required": false,
+            "max_selectable": 1,
+            "options": [
+                {
+                    "option_id": "ice_normal",
+                    "name": "얼음 보통",
+                    "price": 0
+                },
+                {
+                    "option_id": "ice_less",
+                    "name": "얼음 적게",
+                    "price": 0
+                },
+                {
+                    "option_id": "ice_more",
+                    "name": "얼음 많이",
+                    "price": 0
+                }
+            ]
+        },
+        {
+            "group_id": "only_pearl",
+            "group_name": "펄",
+            "required": false,
+            "max_selectable": 1,
+            "options": [
+                {
+                    "option_id": "topping_pearl",
+                    "name": "펄추가",
+                    "price": 700
+                }
+            ]
+        }
+    ],
+    "categories": [
+        {
+            "category_id": "cat_bulk_up",
+            "category_name": "BULK UP LINE UP (1L 대용량)",
+            "items": [
+                {
+                    "id": "b001",
+                    "name": "벌크업 아메리카노 (1L)",
+                    "price": 3000,
+                    "available_option_groups": [
+                        "opt_shot",
+                        "opt_ice_amount"
+                    ],
+                    "sold_out": false
+                },
+                {
+                    "id": "b002",
+                    "name": "벌크업 카페라떼 (1L)",
+                    "price": 4500,
+                    "available_option_groups": [
+                        "opt_shot",
+                        "opt_syrup_topping",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "b003",
+                    "name": "벌크업 바닐라라떼 (1L)",
+                    "price": 5000,
+                    "available_option_groups": [
+                        "opt_shot",
+                        "opt_syrup_topping",
+                        "opt_sweetness",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "b004",
+                    "name": "벌크업 복숭아 아이스티 (1L)",
+                    "price": 4500,
+                    "available_option_groups": [
+                        "opt_shot",
+                        "opt_sweetness",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "custom_1785888611",
+                    "name": "얼박사",
+                    "price": 3000,
+                    "available_option_groups": [
+                        "opt_shot",
+                        "opt_ice_amount"
+                    ],
+                    "sold_out": false
+                }
+            ]
+        },
+        {
+            "category_id": "cat_coffee",
+            "category_name": "커피",
+            "items": [
+                {
+                    "id": "c001",
+                    "name": "아메리카노",
+                    "price": 2000,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_shot",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "c002",
+                    "name": "카페라떼",
+                    "price": 3000,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_shot",
+                        "opt_syrup_topping",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "c003",
+                    "name": "바닐라라떼",
+                    "price": 3500,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_shot",
+                        "opt_syrup_topping",
+                        "opt_sweetness",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "c004",
+                    "name": "헤이즐넛라떼",
+                    "price": 3500,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_shot",
+                        "opt_syrup_topping",
+                        "opt_sweetness",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "c005",
+                    "name": "카라멜 마끼아또",
+                    "price": 3800,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_shot",
+                        "opt_syrup_topping",
+                        "opt_sweetness",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "c006",
+                    "name": "카페모카",
+                    "price": 3800,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_shot",
+                        "opt_syrup_topping",
+                        "opt_sweetness",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "c007",
+                    "name": "연유라떼 (돌체라떼)",
+                    "price": 3800,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_shot",
+                        "opt_syrup_topping",
+                        "opt_sweetness",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "c008",
+                    "name": "양촌리 다방커피",
+                    "price": 3900,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_shot",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "c009",
+                    "name": "콜드브루",
+                    "price": 3300,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "c010",
+                    "name": "콜드브루 라떼",
+                    "price": 3800,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_syrup_topping",
+                        "opt_ice_amount"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_id": "cat_beverage_ade",
+            "category_name": "음료/에이드",
+            "items": [
+                {
+                    "id": "a001",
+                    "name": "복숭아 아이스티",
+                    "price": 3000,
+                    "available_option_groups": [
+                        "opt_shot",
+                        "opt_sweetness",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "a002",
+                    "name": "청포도 에이드",
+                    "price": 4000,
+                    "available_option_groups": [
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "a003",
+                    "name": "자몽 에이드",
+                    "price": 4000,
+                    "available_option_groups": [
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "a004",
+                    "name": "레몬 에이드",
+                    "price": 4000,
+                    "available_option_groups": [
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "a005",
+                    "name": "한라봉 에이드",
+                    "price": 4000,
+                    "available_option_groups": [
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "a006",
+                    "name": "체리콕",
+                    "price": 3800,
+                    "available_option_groups": [
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "a007",
+                    "name": "딸기블라썸라떼",
+                    "price": 3800,
+                    "available_option_groups": [
+                        "opt_syrup_topping",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "a008",
+                    "name": "초코라떼",
+                    "price": 3500,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_syrup_topping",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "a009",
+                    "name": "녹차라떼",
+                    "price": 3500,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_syrup_topping",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "a010",
+                    "name": "고구마라떼",
+                    "price": 3800,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "a011",
+                    "name": "토피넛라떼",
+                    "price": 3800,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_shot",
+                        "opt_ice_amount"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_id": "cat_tea",
+            "category_name": "차",
+            "items": [
+                {
+                    "id": "t001",
+                    "name": "허브티 (캐모마일/페퍼민트/루이보스)",
+                    "price": 3000,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "t002",
+                    "name": "홍차 (얼그레이)",
+                    "price": 3000,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "t003",
+                    "name": "수제 과일차 (자몽/레몬/유자)",
+                    "price": 3500,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_ice_amount"
+                    ]
+                },
+                {
+                    "id": "t004",
+                    "name": "유자민트티",
+                    "price": 3800,
+                    "available_option_groups": [
+                        "opt_temperature",
+                        "opt_ice_amount"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_id": "cat_smoothie_frappe",
+            "category_name": "스무디/프라페",
+            "items": [
+                {
+                    "id": "s001",
+                    "name": "플레인 요거트 스무디",
+                    "price": 3900,
+                    "available_option_groups": [
+                        "opt_syrup_topping"
+                    ]
+                },
+                {
+                    "id": "s002",
+                    "name": "딸기 요거트 스무디",
+                    "price": 4200,
+                    "available_option_groups": [
+                        "opt_syrup_topping"
+                    ]
+                },
+                {
+                    "id": "s003",
+                    "name": "망고 요거트 스무디",
+                    "price": 4200,
+                    "available_option_groups": [
+                        "opt_syrup_topping"
+                    ]
+                },
+                {
+                    "id": "s004",
+                    "name": "블루베리 요거트 스무디",
+                    "price": 4200,
+                    "available_option_groups": [
+                        "opt_syrup_topping"
+                    ]
+                },
+                {
+                    "id": "s005",
+                    "name": "자바칩 프라페",
+                    "price": 4000,
+                    "available_option_groups": [
+                        "opt_syrup_topping"
+                    ]
+                },
+                {
+                    "id": "s006",
+                    "name": "돼지바 프라페",
+                    "price": 4300,
+                    "available_option_groups": [
+                        "opt_syrup_topping"
+                    ]
+                },
+                {
+                    "id": "s007",
+                    "name": "쿠키앤크림 프라페",
+                    "price": 4000,
+                    "available_option_groups": [
+                        "opt_syrup_topping"
+                    ]
+                },
+                {
+                    "id": "s008",
+                    "name": "민트초코칩 프라페",
+                    "price": 4000,
+                    "available_option_groups": [
+                        "opt_syrup_topping"
+                    ]
+                },
+                {
+                    "id": "s009",
+                    "name": "녹차 프라페",
+                    "price": 4000,
+                    "available_option_groups": [
+                        "opt_syrup_topping"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_id": "cat_bubble_tea",
+            "category_name": "버블티",
+            "items": [
+                {
+                    "id": "m001",
+                    "name": "블랙슈가마블티",
+                    "price": 4500,
+                    "available_option_groups": [
+                        "only_pearl"
+                    ]
+                },
+                {
+                    "id": "m002",
+                    "name": "타로마블티",
+                    "price": 4500,
+                    "available_option_groups": [
+                        "only_pearl"
+                    ]
+                },
+                {
+                    "id": "m003",
+                    "name": "밀크마블티",
+                    "price": 4500,
+                    "available_option_groups": [
+                        "only_pearl"
+                    ]
+                },
+                {
+                    "id": "m004",
+                    "name": "초코마블티",
+                    "price": 4500,
+                    "available_option_groups": [
+                        "only_pearl"
+                    ]
+                }
+            ]
+        },
+        {
+            "category_id": "cat_dessert",
+            "category_name": "디저트/베이커리",
+            "items": [
+                {
+                    "id": "d001",
+                    "name": "더블초코칩 쿠키",
+                    "price": 1800,
+                    "available_option_groups": []
+                },
+                {
+                    "id": "d002",
+                    "name": "피넛버터 쿠키",
+                    "price": 1800,
+                    "available_option_groups": []
+                },
+                {
+                    "id": "d003",
+                    "name": "마카롱 (바닐라/딸기/황치즈/초코/오레오)",
+                    "price": 1800,
+                    "available_option_groups": []
+                },
+                {
+                    "id": "d004",
+                    "name": "햄치즈 샌드위치",
+                    "price": 2100,
+                    "available_option_groups": []
+                },
+                {
+                    "id": "d005",
+                    "name": "핫도그",
+                    "price": 2300,
+                    "available_option_groups": []
+                },
+                {
+                    "id": "d006",
+                    "name": "팥 미니 붕어빵",
+                    "price": 2500,
+                    "available_option_groups": []
+                },
+                {
+                    "id": "d007",
+                    "name": "크림/초코크림 카스테라",
+                    "price": 3300,
+                    "available_option_groups": []
+                },
+                {
+                    "id": "d008",
+                    "name": "조각 케이크 (치즈/티라미수/초코무스)",
+                    "price": 4000,
+                    "available_option_groups": []
+                },
+                {
+                    "id": "d009",
+                    "name": "허니브레드",
+                    "price": 5000,
+                    "available_option_groups": []
+                },
+                {
+                    "id": "d010",
+                    "name": "매콤 떡볶이",
+                    "price": 4900,
+                    "available_option_groups": []
+                }
+            ]
+        }
+    ]
+}
